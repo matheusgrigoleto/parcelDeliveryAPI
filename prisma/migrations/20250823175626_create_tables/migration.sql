@@ -32,7 +32,7 @@ CREATE TABLE "deliveries" (
 -- CreateTable
 CREATE TABLE "delivery_logs" (
     "id" TEXT NOT NULL,
-    "desciption" TEXT NOT NULL,
+    "description" TEXT NOT NULL,
     "delivery_id" TEXT NOT NULL,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3) NOT NULL,
