@@ -30,8 +30,8 @@ class UsersController {
     });
 
     const { password: _, ...userWhithoutPassword } = user;
-    
-    return response.json(userWhithoutPassword);
+
+    return response.status(201).json(userWhithoutPassword);
   }
 }
 
