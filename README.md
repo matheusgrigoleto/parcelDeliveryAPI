@@ -23,6 +23,7 @@ API para gerenciamento de entregas, com autenticação, controle de acesso e log
 ---
 
 **⚡ Como rodar**
+```bash
 git clone https://github.com/matheusgrigoleto/parcelDeliveryAPI.git
 cd parcelDeliveryAPI
 npm install
