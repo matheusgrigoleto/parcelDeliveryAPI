@@ -24,8 +24,8 @@ class DeliveryLogsController {
       throw new AppError("Change status to shipped");
     }
 
-    if(delivery.status === "delivered") {
-      throw new AppError("This order has already been delivered")
+    if (delivery.status === "delivered") {
+      throw new AppError("This order has already been delivered");
     }
 
     await prisma.deliveryLog.create({
@@ -52,6 +52,10 @@ class DeliveryLogsController {
         logs: true,
       },
     });
+
+    if (!delivery) {
+      return response.status(404).json({ message: "Delivery not found" });
+    }
 
     if (
       request.user?.role === "customer" &&
